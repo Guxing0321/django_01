@@ -13,3 +13,8 @@ def index(request):
     booklist = BookInfo.objects.all()
     context = {'title': '南京信息工程大学','booklist':booklist}
     return render(request, 'test1/index.html', context)
+
+
+# 返回到show的页面
+def show(request,id):
+    return  render(request,'test1/show.html')
